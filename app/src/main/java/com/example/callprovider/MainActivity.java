@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
         final ArrayList<String> unknownItem = new ArrayList<String>();
         final ArrayAdapter adapter2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1, unknownItem);
 
-        button2 = findViewById(R.id.knownButton);
-        button3 = findViewById(R.id.unknownButton);
 
         known = findViewById(R.id.knownListView);
         known.setAdapter(adapter1);
@@ -128,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 c2.close();
 
 
-        Intent intent= new Intent(MainActivity.this,AddActivity.class);
+        Intent intent= new Intent(MainActivity.this,ContactsActivity.class);
 
         known.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

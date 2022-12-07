@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="#FFFFFF"
+    android:background="#f0fff0"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,12 +15,18 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/knownButton"
+
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="저장된 연락 불러오기" />
-
+            android:gravity="center"
+            android:background="#54BD54"
+            android:textColor="#ffffff"
+            android:textSize="10pt"
+            android:fontFamily="@font/basic"
+            android:layout_marginBottom="5pt"
+            android:text="알고 있는 발신자"  />
 
         <ListView
             android:id="@+id/knownListView"
@@ -36,17 +42,24 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/unknownButton"
+
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="저장 안된 연락 불러오기" />
-
+            android:gravity="center"
+            android:background="#54BD54"
+            android:textColor="#ffffff"
+            android:textSize="10pt"
+            android:fontFamily="@font/basic"
+            android:layout_marginBottom="5pt"
+            android:text="알 수 없는 발신자" />
 
         <ListView
             android:id="@+id/unknownListView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            />
 
     </LinearLayout>
 </LinearLayout>
