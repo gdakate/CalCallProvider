@@ -22,7 +22,7 @@ public class AddActivity extends AppCompatActivity {
     EditText et_name;
     TextView et_num;
     String num, name;
-    Button saved;
+    Button saved,home;
 
 
 
@@ -34,6 +34,7 @@ public class AddActivity extends AppCompatActivity {
         et_name = findViewById(R.id.edit_name);
         et_num = findViewById(R.id.edit_num);
         saved = findViewById(R.id.button_save);
+        home=findViewById(R.id.button_home);
 
         Intent intent= getIntent();
         et_num.setText(intent.getStringExtra("전화번호"));
@@ -41,26 +42,29 @@ public class AddActivity extends AppCompatActivity {
 
 
 
+//        Intent page = new Intent(ContactsContract.Intents.Insert.ACTION);
+//        Intent go= new Intent(AddActivity.this,FrontActivity.class);
+//        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
-//        save.setOnClickListener(new View.OnClickListener() {
+
+        saved.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(AddActivity.this, "저장 완료", Toast.LENGTH_SHORT).show();
+            }
+        });
+//        home.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-//                    requestPermissions(new String[]{Manifest.permission.READ_CONTACTS}, 0);
-//                }
-//                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-//                    requestPermissions(new String[]{Manifest.permission.WRITE_CONTACTS}, 0);
-//                } else {
-//                    if (et_name.getText().toString().length() == 0) {
-//                        Toast.makeText(AddActivity.this, "이름을 입력해주세요", Toast.LENGTH_SHORT).show();
-//                    } else {
-//                        setAddContacts();
-//
-//                    }
-//                }
+//                page.putExtra(ContactsContract.Intents.Insert.PHONE, et_num.getText());
+//                page.putExtra(ContactsContract.Intents.Insert.NAME, et_name.getText());
+////                startActivity(go);
+//                startActivity(page);
+
+
 //            }
 //        });
-//    }
+    }
 //
 //
 //    private void setAddContacts(){
@@ -102,5 +106,5 @@ public class AddActivity extends AppCompatActivity {
 //        }
 //        list.clear();   //리스트 초기화
 //    }
-}}
+}
 

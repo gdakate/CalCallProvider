@@ -5,22 +5,163 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F0FFF0"
     tools:context=".AddActivity">
 
     <TextView
-        android:id="@+id/edit_num"
+        android:id="@+id/addPerson"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="57dp"
+        android:layout_marginBottom="5pt"
+        android:background="#54BD54"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:text="연락처 추가하기"
+        android:textColor="@color/black"
+        android:textSize="12pt" />
 
-    <EditText
-        android:id="@+id/edit_name"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="315dp"
+        app:srcCompat="@drawable/profile" />
 
-    <Button
-        android:id="@+id/button_save"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="add" />
+        android:layout_height="22pt"
+        android:orientation="horizontal"
+        android:layout_marginTop="5pt"
+        >
+
+        <TextView
+            android:id="@+id/labelName"
+            android:layout_width="30pt"
+            android:layout_height="10pt"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/basic"
+            android:textColor="@color/black"
+            android:text="이름" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelNumber"
+            android:layout_width="30pt"
+            android:layout_height="10pt"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/basic"
+            android:textColor="@color/black"
+            android:text="전화번호" />
+
+        <TextView
+            android:id="@+id/edit_num"
+            android:layout_width="match_parent"
+            android:layout_height="15pt"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="30pt"
+            android:layout_height="10pt"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/basic"
+            android:textColor="@color/black"
+            android:text="E-Mail" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="#aaaaaa"
+            android:text="abcd@naver.com" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20pt"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/labelGroup"
+            android:layout_width="30pt"
+            android:layout_height="10pt"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/basic"
+            android:textColor="@color/black"
+            android:text="그룹" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가족" />
+
+            <RadioButton
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회사" />
+
+            <RadioButton
+                android:id="@+id/friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="친구" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="40pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:background="@drawable/button_color"
+            android:fontFamily="@font/computer"
+            android:text="저장" />
+
+        <Button
+            android:id="@+id/button_home"
+            android:layout_width="40pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:background="@drawable/button_color"
+            android:fontFamily="@font/computer"
+            android:text="Home" />
+    </LinearLayout>
 
 </LinearLayout>
